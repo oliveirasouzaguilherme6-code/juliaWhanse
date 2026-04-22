@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Painel | Julia Hanse Imóveis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-top">Julia Hanse</span>
+        <span class="logo-bottom">Imóveis</span>
+      </a>
+
+      <div class="header-actions">
+        <button class="ghost-btn ghost-dark" id="logoutBtn">Sair</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container">
+      <div class="section-head">
+        <div>
+          <span class="section-tag">Painel</span>
+          <h2 class="section-title">Cadastrar e editar imóveis</h2>
+        </div>
+      </div>
+
+      <div class="admin-grid">
+        <div class="card-shell">
+          <h3 id="formTitle">Cadastrar novo imóvel</h3>
+
+          <div class="form-grid">
+            <div class="field">
+              <label for="title">Título</label>
+              <input id="title" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="type">Tipo</label>
+              <select id="type">
+                <option value="casa">Casa</option>
+                <option value="apartamento">Apartamento</option>
+                <option value="sobrado">Sobrado</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="price">Preço</label>
+              <input id="price" type="number" />
+            </div>
+
+            <div class="field">
+              <label for="neighborhood">Bairro</label>
+              <input id="neighborhood" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="city">Cidade</label>
+              <input id="city" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="code">Código</label>
+              <input id="code" type="text" />
+            </div>
+
+            <div class="field">
+              <label for="bedrooms">Quartos</label>
+              <input id="bedrooms" type="number" />
+            </div>
+
+            <div class="field">
+              <label for="bathrooms">Banheiros</label>
+              <input id="bathrooms" type="number" />
+            </div>
+
+            <div class="field">
+              <label for="garage">Garagem</label>
+              <input id="garage" type="number" />
+            </div>
+
+            <div class="field">
+              <label for="area">Metragem (m²)</label>
+              <input id="area" type="number" />
+            </div>
+
+            <div class="field">
+              <label for="status">Status</label>
+              <select id="status">
+                <option value="disponivel">Disponível</option>
+                <option value="reservado">Reservado</option>
+                <option value="vendido">Vendido</option>
+              </select>
+            </div>
+
+            <div class="field">
+              <label for="highlight">Destaque</label>
+              <select id="highlight">
+                <option value="true">Sim</option>
+                <option value="false">Não</option>
+              </select>
+            </div>
+
+            <div class="field full">
+              <label for="description">Descrição</label>
+              <textarea id="description"></textarea>
+            </div>
+
+            <div class="field full">
+              <label for="images">Imagens (URLs separadas por vírgula)</label>
+              <textarea id="images"></textarea>
+            </div>
+          </div>
+
+          <div class="form-actions">
+            <button class="admin-btn" id="savePropertyBtn">Salvar imóvel</button>
+            <button class="ghost-btn ghost-dark" id="resetFormBtn">Limpar</button>
+          </div>
+        </div>
+
+        <div class="card-shell">
+          <h3>Imóveis cadastrados</h3>
+          <div class="admin-list" id="adminList"></div>
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <script src="painel.js"></script>
+</body>
+</html>

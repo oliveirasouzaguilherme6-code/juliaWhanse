@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Imóveis | Julia Hanse Imóveis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-top">Julia Hanse</span>
+        <span class="logo-bottom">Imóveis</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="imoveis.html">Imóveis</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Painel</a>
+      </nav>
+
+      <div class="header-actions">
+        <a class="header-btn" href="https://wa.me/5544999999999" target="_blank">WhatsApp</a>
+        <button class="menu-toggle" id="menuToggle">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <div class="mobile-panel" id="mobilePanel">
+    <div class="mobile-nav">
+      <a href="index.html">Início</a>
+      <a href="imoveis.html">Imóveis</a>
+      <a href="cadastro.html">Cadastro</a>
+      <a href="login.html">Painel</a>
+    </div>
+  </div>
+
+  <main>
+    <section class="hero hero-small">
+      <div class="container">
+        <span class="badge">Catálogo</span>
+        <h1>Casas, apartamentos e oportunidades</h1>
+        <p>Encontre o imóvel ideal com uma navegação mais clara e moderna.</p>
+      </div>
+    </section>
+
+    <section class="search-wrap page-search">
+      <div class="container">
+        <div class="search-box search-box-4">
+          <div class="field">
+            <label for="filterType">Tipo</label>
+            <select id="filterType">
+              <option value="todos">Todos</option>
+              <option value="casa">Casas</option>
+              <option value="apartamento">Apartamentos</option>
+              <option value="sobrado">Sobrados</option>
+            </select>
+          </div>
+
+          <div class="field">
+            <label for="filterNeighborhood">Bairro</label>
+            <input id="filterNeighborhood" type="text" placeholder="Ex.: Centro" />
+          </div>
+
+          <div class="field">
+            <label for="filterMinPrice">Preço mínimo</label>
+            <input id="filterMinPrice" type="number" placeholder="0" />
+          </div>
+
+          <div class="field">
+            <label for="filterMaxPrice">Preço máximo</label>
+            <input id="filterMaxPrice" type="number" placeholder="500000" />
+          </div>
+
+          <button class="btn btn-primary" id="searchBtn">Buscar</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-head">
+          <div>
+            <span class="section-tag">Todos os imóveis</span>
+            <h2 class="section-title">Catálogo completo</h2>
+          </div>
+        </div>
+
+        <div class="cards-grid" id="allPropertiesGrid"></div>
+      </div>
+    </section>
+  </main>
+
+  <div class="modal" id="propertyModal">
+    <div class="modal-box">
+      <div class="modal-head">
+        <div>
+          <span class="section-tag">Detalhes do imóvel</span>
+          <h2 class="modal-title">Visualizar imóvel</h2>
+          <p class="modal-subtitle">Veja todas as informações e entre em contato.</p>
+        </div>
+        <button class="icon-btn" id="closePropertyModal">✕</button>
+      </div>
+
+      <div id="propertyModalContent"></div>
+    </div>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>

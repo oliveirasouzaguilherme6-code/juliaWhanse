@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Cliente | Julia Hanse Imóveis</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header class="site-header">
+    <div class="container header-content">
+      <a href="index.html" class="logo">
+        <span class="logo-top">Julia Hanse</span>
+        <span class="logo-bottom">Imóveis</span>
+      </a>
+
+      <nav class="nav">
+        <a href="index.html">Início</a>
+        <a href="imoveis.html">Imóveis</a>
+        <a href="cadastro.html">Cadastro</a>
+        <a href="login.html">Painel</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="section">
+    <div class="container narrow-container">
+      <div class="card-shell">
+        <span class="section-tag">Cadastro</span>
+        <h1 class="section-title">Quero atendimento</h1>
+        <p class="section-text">
+          Preencha os dados abaixo. As informações serão enviadas para o e-mail de atendimento.
+        </p>
+
+        <form
+          action="https://formsubmit.co/oliveirasouzaguilherme6@gmail.com"
+          method="POST"
+          class="form-grid customer-form"
+        >
+          <input type="hidden" name="_subject" value="Novo cadastro de cliente - Site Julia Hanse Imóveis">
+          <input type="hidden" name="_captcha" value="false">
+          <input type="hidden" name="_template" value="table">
+
+
+          <input type="hidden" name="_captcha" value="false">
+<input type="hidden" name="_template" value="table">
+<input type="hidden" name="_next" value="http://127.0.0.1:5500/obrigado.html">
+
+          <div class="field">
+            <label for="nome">Nome</label>
+            <input id="nome" name="Nome" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="telefone">Telefone</label>
+            <input id="telefone" name="Telefone" type="text" required>
+          </div>
+
+          <div class="field">
+            <label for="emailCliente">E-mail</label>
+            <input id="emailCliente" name="Email" type="email" required>
+          </div>
+
+          <div class="field">
+            <label for="tipoInteresse">Tipo de imóvel</label>
+            <select id="tipoInteresse" name="Tipo de interesse">
+              <option>Casa</option>
+              <option>Apartamento</option>
+              <option>Sobrado</option>
+              <option>Outro</option>
+            </select>
+          </div>
+
+          <div class="field full">
+            <label for="mensagem">Mensagem</label>
+            <textarea id="mensagem" name="Mensagem" placeholder="Descreva o que você procura..."></textarea>
+          </div>
+
+          <div class="field full">
+            <button type="submit" class="btn btn-primary">Enviar cadastro</button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </main>
+</body>
+</html>
