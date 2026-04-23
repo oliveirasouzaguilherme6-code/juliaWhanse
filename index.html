@@ -3,136 +3,197 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Julia Hanse Imóveis</title>
+  <title>Julia W. Hanse Imóveis</title>
+  <meta name="description" content="Imóveis com apresentação premium, atendimento próximo e experiência moderna em Campo Mourão." />
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&family=Cormorant+Garamond:wght@600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 </head>
 <body>
-  <header class="site-header">
-    <div class="container header-content">
-      <a href="index.html" class="logo">
-        <span class="logo-top">Julia Hanse</span>
-        <span class="logo-bottom">Imóveis</span>
+  <div class="cursor-glow"></div>
+
+  <header class="site-header" id="siteHeader">
+    <div class="container header-inner">
+      <a href="index.html" class="brand">
+        <span class="brand-title">Julia W. Hanse</span>
+        <span class="brand-subtitle">Imóveis</span>
       </a>
 
-      <nav class="nav">
-        <a href="index.html">Início</a>
+      <nav class="desktop-nav">
+        <a href="index.html" class="active">Início</a>
         <a href="imoveis.html">Imóveis</a>
-        <a href="cadastro.html">Cadastro</a>
-        <a href="login.html">Painel</a>
+        <a href="sobre.html">Sobre</a>
+        <a href="contato.html">Contato</a>
       </nav>
 
       <div class="header-actions">
-        <a class="header-btn" href="https://wa.me/5544999999999" target="_blank">WhatsApp</a>
-        <button class="menu-toggle" id="menuToggle">☰</button>
+        <a href="contato.html" class="btn btn-gold">Fale comigo</a>
+        <button class="menu-btn" id="menuBtn" aria-label="Abrir menu">
+          <span></span><span></span>
+        </button>
       </div>
+    </div>
+
+    <div class="mobile-menu" id="mobileMenu">
+      <a href="index.html">Início</a>
+      <a href="imoveis.html">Imóveis</a>
+      <a href="sobre.html">Sobre</a>
+      <a href="contato.html">Contato</a>
     </div>
   </header>
 
-  <div class="mobile-panel" id="mobilePanel">
-    <div class="mobile-nav">
-      <a href="index.html">Início</a>
-      <a href="imoveis.html">Imóveis</a>
-      <a href="cadastro.html">Cadastro</a>
-      <a href="login.html">Painel</a>
-    </div>
-  </div>
-
   <main>
     <section class="hero">
+      <div class="hero-bg-shape hero-shape-1"></div>
+      <div class="hero-bg-shape hero-shape-2"></div>
+
       <div class="container hero-grid">
-        <div>
-          <span class="badge">Atendimento personalizado</span>
-          <h1>Seu próximo imóvel começa com uma experiência melhor.</h1>
+        <div class="hero-content reveal">
+          <span class="eyebrow">Atendimento imobiliário com presença premium</span>
+          <h1>
+            Uma experiência mais elegante
+            <span>para encontrar o imóvel certo.</span>
+          </h1>
           <p>
-            Um site mais moderno, elegante e organizado para apresentar casas,
-            apartamentos e oportunidades com mais clareza e autoridade.
+            Um site com apresentação refinada, navegação clara e atendimento direto para
+            quem busca casas, apartamentos e boas oportunidades em Campo Mourão.
           </p>
 
-          <div class="hero-actions">
-            <a href="imoveis.html" class="btn btn-primary">Ver imóveis</a>
-            <a href="cadastro.html" class="btn btn-secondary">Quero atendimento</a>
+          <div class="hero-actions-row">
+            <a href="imoveis.html" class="btn btn-gold">Ver imóveis</a>
+            <a href="sobre.html" class="btn btn-outline">Conhecer a proposta</a>
+          </div>
+
+          <div class="hero-stats">
+            <div class="stat-card">
+              <strong>Catálogo organizado</strong>
+              <span>Visual limpo e profissional</span>
+            </div>
+            <div class="stat-card">
+              <strong>Contato direto</strong>
+              <span>Mais agilidade no atendimento</span>
+            </div>
           </div>
         </div>
 
-        <div class="hero-card">
-          <div class="hero-card-content">
-            <span>Destaque</span>
-            <h3>Mais organização, mais presença e uma apresentação premium.</h3>
-            <p>Inspirado na identidade da marca, mas com visual muito mais forte.</p>
+        <div class="hero-visual reveal delay-1">
+          <div class="hero-photo-card floating-card">
+            <div class="photo-overlay"></div>
+            <div class="hero-photo-text">
+              <span>Destaque editorial</span>
+              <h3>Design moderno, presença forte e experiência mais sofisticada.</h3>
+            </div>
           </div>
         </div>
       </div>
     </section>
 
-    <section class="section section-dark">
-      <div class="container about-grid">
-        <div class="about-image"></div>
-        <div class="about-text">
-          <span class="section-tag">Sobre</span>
-          <h2 class="section-title">Atendimento mais humano, moderno e estratégico.</h2>
-          <p>
-            Aqui, o cliente encontra imóveis com uma apresentação mais clara,
-            elegante e organizada, facilitando a escolha e o contato.
-          </p>
-          <ul class="about-list">
-            <li>Catálogo visual mais limpo</li>
-            <li>Separação clara dos imóveis</li>
-            <li>Contato rápido pelo WhatsApp</li>
-            <li>Mais autoridade digital</li>
-          </ul>
-          <a href="imoveis.html" class="btn btn-primary">Explorar imóveis</a>
-        </div>
-      </div>
-    </section>
-
-    <section class="section" id="dicas">
+    <section class="section soft-section">
       <div class="container">
-        <div class="section-head">
+        <div class="section-heading reveal">
           <div>
-            <span class="section-tag">Dicas</span>
-            <h2 class="section-title">Conteúdo para comprar melhor</h2>
+            <span class="eyebrow">Curadoria</span>
+            <h2>Imóveis apresentados com mais valor</h2>
           </div>
+          <a href="imoveis.html" class="text-link">Explorar catálogo</a>
         </div>
 
-        <div class="blog-grid">
-          <article class="blog-card">
-            <div class="blog-thumb"></div>
-            <div class="blog-body">
-              <h3>Como escolher o imóvel ideal</h3>
-              <p>Entenda os principais pontos que devem ser analisados antes de fechar negócio.</p>
+        <div class="featured-grid">
+          <article class="featured-card reveal">
+            <div class="featured-image img-house-1"></div>
+            <div class="featured-body">
+              <span class="pill">Casa</span>
+              <h3>Fachada contemporânea e ótima presença visual</h3>
+              <p>Apresentação mais elegante para imóveis que merecem destaque.</p>
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-thumb"></div>
-            <div class="blog-body">
-              <h3>O que avaliar em um apartamento</h3>
-              <p>Veja detalhes importantes para não escolher só pela aparência.</p>
+          <article class="featured-card reveal delay-1">
+            <div class="featured-image img-apto-1"></div>
+            <div class="featured-body">
+              <span class="pill">Apartamento</span>
+              <h3>Experiência mais clara para o cliente navegar com confiança</h3>
+              <p>Mais organização, mais sofisticação e mais credibilidade digital.</p>
             </div>
           </article>
 
-          <article class="blog-card">
-            <div class="blog-thumb"></div>
-            <div class="blog-body">
-              <h3>Financiamento sem complicação</h3>
-              <p>Organize documentos e entenda melhor o processo antes de iniciar.</p>
+          <article class="featured-card reveal delay-2">
+            <div class="featured-image img-house-2"></div>
+            <div class="featured-body">
+              <span class="pill">Oportunidade</span>
+              <h3>Layout pensado para valorizar cada imóvel e cada detalhe</h3>
+              <p>Menos poluição, mais foco no que realmente importa.</p>
             </div>
           </article>
         </div>
       </div>
     </section>
 
-    <section class="cta-section">
-      <div class="container cta-box">
-        <div>
-          <span class="section-tag">Contato</span>
-          <h2 class="section-title">Quer ajuda para encontrar o imóvel certo?</h2>
-          <p>Entre em contato e receba um atendimento mais direto e organizado.</p>
+    <section class="section dark-section">
+      <div class="container about-home-grid">
+        <div class="about-home-media reveal">
+          <div class="about-stack">
+            <div class="about-stack-card stack-card-main"></div>
+            <div class="about-stack-card stack-card-small"></div>
+          </div>
         </div>
-        <a href="cadastro.html" class="btn btn-primary">Cadastrar interesse</a>
+
+        <div class="about-home-content reveal delay-1">
+          <span class="eyebrow">Sobre a presença da marca</span>
+          <h2>Mais do que mostrar imóveis. É transmitir confiança.</h2>
+          <p>
+            A proposta desse site é apresentar imóveis de forma mais refinada, humana e
+            profissional, valorizando a imagem da corretora e melhorando a experiência
+            de quem chega até ela.
+          </p>
+          <ul class="clean-list">
+            <li>Visual mais sofisticado e menos genérico</li>
+            <li>Navegação clara para imóveis e contato</li>
+            <li>Microinterações que dão vida ao site</li>
+            <li>Experiência responsiva para celular e desktop</li>
+          </ul>
+          <a href="sobre.html" class="btn btn-gold">Ver mais sobre</a>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-heading reveal">
+          <div>
+            <span class="eyebrow">Conteúdo</span>
+            <h2>Dicas para comprar melhor</h2>
+          </div>
+        </div>
+
+        <div class="insights-grid">
+          <article class="insight-card reveal">
+            <h3>Como analisar um imóvel com mais segurança</h3>
+            <p>Veja o que observar antes de tomar uma decisão importante.</p>
+          </article>
+
+          <article class="insight-card reveal delay-1">
+            <h3>O que faz um imóvel parecer mais valioso</h3>
+            <p>Apresentação, contexto e percepção fazem toda a diferença.</p>
+          </article>
+
+          <article class="insight-card reveal delay-2">
+            <h3>Quando vale mais a pena financiar</h3>
+            <p>Entenda melhor o momento certo para avançar com segurança.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta-section">
+      <div class="container cta-box reveal">
+        <div>
+          <span class="eyebrow">Conversa direta</span>
+          <h2>Vamos encontrar o imóvel ideal com uma experiência melhor.</h2>
+          <p>Atendimento próximo, apresentação premium e foco total no que faz sentido para você.</p>
+        </div>
+        <a href="contato.html" class="btn btn-dark">Entrar em contato</a>
       </div>
     </section>
   </main>
@@ -140,17 +201,17 @@
   <footer class="site-footer">
     <div class="container footer-grid">
       <div>
-        <h3>Julia Hanse Imóveis</h3>
-        <p>Apresentação imobiliária moderna, organizada e profissional.</p>
+        <h3>Julia W. Hanse Imóveis</h3>
+        <p>Apresentação imobiliária moderna, elegante e pensada para transmitir confiança.</p>
       </div>
 
       <div>
-        <h4>Páginas</h4>
+        <h4>Navegação</h4>
         <ul>
           <li><a href="index.html">Início</a></li>
           <li><a href="imoveis.html">Imóveis</a></li>
-          <li><a href="cadastro.html">Cadastro</a></li>
-          <li><a href="login.html">Painel</a></li>
+          <li><a href="sobre.html">Sobre</a></li>
+          <li><a href="contato.html">Contato</a></li>
         </ul>
       </div>
 
@@ -159,12 +220,17 @@
         <ul>
           <li>Campo Mourão - PR</li>
           <li>(44) 99999-9999</li>
-          <li>contato@juliahanse.com.br</li>
+          <li>contato@juliawhanse.com</li>
         </ul>
       </div>
     </div>
+
+    <div class="footer-bottom container">
+      <p>© 2026 Julia W. Hanse Imóveis</p>
+      <a href="login.html" class="area-link">Área da imobiliária</a>
+    </div>
   </footer>
 
-  <script src="app.js"></script>
+  <script src="js/main.js"></script>
 </body>
 </html>
